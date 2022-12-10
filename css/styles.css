@@ -3,11 +3,13 @@ h2,
 h3,
 p,
 ul
- {
+{
 margin-bottom: 0px;
 margin-top: 0;
 }
-
+ul{
+    padding: 0;
+}
 img {
     display: block;
     max-width: 100%;
@@ -43,6 +45,8 @@ img {
     color: var(--brand-color)
 }
 
+
+
 /* .header {
    
 } */
@@ -52,16 +56,16 @@ img {
     font-family: 'Roboto',sans-serif;
     color: var(--main-text-color);
     font-style: normal;
- }
+}
 
- .conteiner {
+.conteiner {
     width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
- }
- .main-nav {
+}
+.main-nav {
     display: flex;
     align-items: center;
 
@@ -112,8 +116,8 @@ img {
 
 .nav:hover,
 .nav:focus,
-.contact:hover,
-.contact:focus {
+.contact-link:hover,
+.contact-link:focus {
     color: var(--brand-color);
 }
 
@@ -125,8 +129,8 @@ img {
     line-height: 1,14;
     letter-spacing: 0.02em;
     color: var(--text-color);
-
 }
+
 
 .contact {
     margin-left: auto; 
@@ -144,7 +148,13 @@ img {
     text-align: center;
     height: 600px;
     padding: 200px 0px;
-
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4) ),
+    url(../img/heroimg.jpg);
 }
 
 .slogan {
@@ -200,6 +210,34 @@ img {
 }
 .item-text:last-child{
     margin-right: 0px;
+}
+
+.item-text::before {
+    display: block;
+    content: "";
+    height: 120px;
+    background-color: #F5F4FA;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    
+}
+
+.item-text-1::before {
+    background-image: url("../img/antenna.svg");
+}
+
+.item-text-2::before {
+    background-image: url("../img/clock.svg");
+}
+
+.item-text-3::before {
+    background-image: url("../img/diagram.svg");
+}
+
+.item-text-4::before {
+    background-image: url("../img/astronaut.svg");
 }
 
 .features-text .item {
@@ -275,8 +313,7 @@ img {
 }
 
 .card-team {
-    padding-bottom: 30px;
-    padding-top: 30px;
+    padding: 30px;
 }
 
 .our-team {
@@ -290,12 +327,44 @@ background-color: #F5F4FA;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--text-color);
-    margin: 0px;
-    padding: 0px;
+    margin-bottom: 16px;
 }
 .about-project {
     width: 370px;
 }
+.icon-team{
+    margin-right: 10px;
+    padding-right: 10px;
+}
+.icon-sprite {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    
+}
+.icon{
+
+}
+.icon:last-child {
+}
+.icon-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+}
+
+.icon-team:hover,
+.icon-team:focus {
+    background-color: var(--brand-color);
+    border-radius: 50%;
+
+}
+
 
 /* Підвал */
 .footer-logo {
@@ -386,6 +455,11 @@ margin-bottom: 20px;
     margin-bottom: 30px;
 
     border: 1px solid #EEEEEE;
+}
+.item-project:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+     0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .card-content {
