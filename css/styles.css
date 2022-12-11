@@ -124,6 +124,8 @@ img {
 
 /* Contact */
 .contact-link {
+    display: flex;
+    align-items: center;
     font-weight: 500;
     font-size: 14px;
     line-height: 1,14;
@@ -131,6 +133,10 @@ img {
     color: var(--text-color);
 }
 
+.contact-icon {
+    margin-right: 10px;
+    fill: currentColor;
+}
 
 .contact {
     margin-left: auto; 
@@ -332,39 +338,67 @@ background-color: #F5F4FA;
 .about-project {
     width: 370px;
 }
-.icon-team{
-    margin-right: 10px;
-    padding-right: 10px;
-}
+
 .icon-sprite {
     display: flex;
     list-style: none;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     
 }
-.icon{
 
-}
-.icon:last-child {
-}
+
 .icon-list {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 44px;
     height: 44px;
     border-radius: 50%;
-
+    fill: #AFB1B8;
 }
 
-.icon-team:hover,
-.icon-team:focus {
+.icon-list:hover,
+.icon-list:focus {
     background-color: var(--brand-color);
     border-radius: 50%;
-
+    fill: var(--primary-wite-color);
 }
 
+
+/* clients */
+
+.сlients-list {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    margin: -15px;
+}
+.client-list-bg {
+    flex-basis: calc((100% - 6 * 30px) / 6);
+    margin: 15px;
+    width: 100%;
+    height: 92px;
+}
+.clients-icon:hover,
+.clients-icon:focus {
+    border: 1px solid #2196F3;
+}
+.clients-icon{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #AFB1B8;
+    fill: #AFB1B8;
+}
+
+.clients-icon:hover,
+.clients-icon:focus{
+    fill: var(--brand-color);
+}
 
 /* Підвал */
 .footer-logo {
@@ -404,7 +438,49 @@ margin-bottom: 20px;
     margin-bottom: 9px;
 }
 .item-logo {
-    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.social{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: unset;
+    align-items: flex-start;
+    margin-left: 70px;
+}
+.social-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+color: #FFFFFF;
+}
+.conteiner-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: unset;
+    align-items: baseline;
+    /* justify-content: space-between; */
+}
+.icon-list-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: var(--primary-wite-color);
+    background: rgba(255, 255, 255, 0.1);
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.icon-list-footer:focus,
+.icon-list-footer:hover {
+    background: var(--brand-color);   
 }
 
 /* Портфоліо */
